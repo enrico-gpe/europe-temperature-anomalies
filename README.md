@@ -4,14 +4,14 @@ A robust, interactive R script to fetch, process, and map 2-meter thermal anomal
 
 ---
 
-## 📊 Visual Outputs
+## 📊 Visual Outputs & Terminal Interface
 
-The pipeline processes global meteorological grids and slices them down to the European domain. Below is a comparison between the standard regional grid and the finalized politcally-masked landmass output:
+The pipeline processes global meteorological grids, slices them down to the European domain, and prints real-time statistics. Below is a complete overview of the execution flow:
 
-### 1. Raw Bounding Box Analysis
-Initially, the script crops the GFS and Climatology data to a macro European bounding box, which naturally includes parts of North Africa and the Atlantic Ocean:
+### 1. Terminal Interactive Prompt & Report
+When executed, the script prompts the user to select the GFS cycle run and forecast lead time. It features a smart fallback system to ensure data availability and outputs a clean text-based extreme metrics report directly to the console:
 
-![Raw Bounding Box Analysis](plots/screen04.jpg)
+![Terminal Interactive Prompt and Report](plots/map.jpg)
 
 ### 2. Masked Landmass Analysis (Final Output)
 By applying a strict political boundary vector, the script filters out marine areas and neighboring continents to isolate and analyze the European territory exclusively:
